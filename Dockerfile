@@ -2,7 +2,7 @@ FROM node:9
 
 ADD . /app
 
-RUN cd /app/src && npm install
+RUN cd /app && npm install
 
 EXPOSE 3000
 
