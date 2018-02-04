@@ -9,12 +9,14 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(cors());
 
 app.post('/notification', (req, res) => {
-  const content = {
+  const data = {
     title:   req.body.title,
     content: req.body.content
   };
 
-  io.sockets.emit('notification', content);
+  io.sockets.emit('notification', {
+    data: data
+  });
 
   res.json(content);
 });
