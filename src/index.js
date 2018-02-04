@@ -18,7 +18,7 @@ app.post('/notification', (req, res) => {
     data: data
   });
 
-  res.json(content);
+  res.json(data);
 });
 
 io.on('connection', (socket) => {
